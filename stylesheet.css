@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@font-face{
+  font-family: defont;
+  src: url(./fonts/REP2.TTF);
+}
+@font-face{
+  font-family: myboi;
+  src: url(./fonts/grunge.ttf);
+}
+
+body {
+  font-family: "Convergence", sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #060b23;
+}
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+.form_inp{
+  position: absolute;
+  top: 350px;
+  left: 0;
+  width: 500px;
+  height: 50px;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+.form_inp:hover{
+  border-color: #adffff;
+}
+.form_inp:focus{
+  border-color: #adffff;
+}
+.for_label {
+  position: absolute;
+  left: 1rem;
+  top: 358px;
+  padding: 0 0.5rem;
+  color: white;
+  cursor: text;
+  font-family: defont;
+  font-size: 20px;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  -webkit-user-select: none;
+}
+.form_inp:focus ~ .for_label,
+.for_inp:not(:placeholder-shown).for_inp:not(:focus) ~ .for_label {
+  opacity: 0;
+}
+img { 
+  top: 1000px;
+  max-width: 100%;
+  max-height: 100%;
+}  
+
+.btn{
+	position: absolute;
+  cursor: text;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+  font-family: myboi;
+}
+.buttons{
+  background: transparent;
+  position: relative;
+  color: #cf11c6;
+  top: -13.8cm;
+  left: 14cm;
+  width: 230px;
+  height: 50px;
+  font-family: myboi;
+  font-size: 18px;
+  border-color: aqua;
+  font-weight: 400;
+  border-radius: 22px;
+  letter-spacing: 0px;
+  transition: 2s;
+  transition: color 0.5s;
+
+}
+.buttons:hover{
+  cursor: pointer;
+  box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
+  transition: 1s;
+  background-color: #cf11c6;
+  color: aqua;
+}
+.close_button{
+  background: transparent;
+	color:aquamarine;
+  font-family: myboi;
+	border-color: aqua;
+	transition: 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 32cm;
+  padding-bottom: 0px;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  transition: background-color 2s;
+}
+.close_button:hover{
+  cursor: pointer;
+	box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
+	transition: 0.5s;
+  background-color: rgb(133, 35, 133);
+}
+.minimize_button{
+  background: transparent;
+	color:aquamarine;
+  font-family: myboi;
+	border-color: aqua;
+	transition: 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 29.8cm;
+  padding-bottom: 0px;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  transition: background-color 2s;
+}
+.minimize_button:hover{
+  cursor: pointer;
+	box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
+	transition: 0.5s;
+  background-color: rgb(133, 35, 133);
+}
+.max_button{
+  background: transparent;
+	color:aquamarine;
+  font-family: myboi;
+	border-color: aqua;
+	transition: 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+  left: 27.4cm;
+  padding-bottom: 0px;
+  position: relative;
+  text-align: center;
+  font-size: 14px;
+  transition: background-color 2s;
+}
+
+.max_button:hover{
+  cursor: pointer;
+	box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
+	transition: 0.5s;
+  background-color: rgb(133, 35, 133);
+}
