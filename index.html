@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="logo">
+          <a href="#" class="nav-link">
+            <span class="link-text logo-text">GNIME</span>
+              <g class="fa-group">
+              </g>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="link-text">Porn</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="link-text">Manga</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="link-text">Hentai</span>
+          </a>
+        </li>
+  
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <span class="link-text">Credit</span>
+          </a>
+        </li>
+    </nav>
   <link rel="stylesheet" href="stylesheet.css"> 
     <meta charset="UTF-8">
     <div>  
-      <h1 style="font-size: 15px;">
+      <h1 style="font-size: 5px; background-color: rgb(30, 16, 78); height: 1cm;">
         <button class="close_button" onclick="clicked()">X</button>
-        <button class="minimize_button" onclick="maxied()">Y</button>
-        <button class="max_button" onclick="minked()">Z</button>
+        <!--<button class="max_button" onclick="maxied()">Y</button>
+        <button class="minimize_button" onclick="minked()">Z</button>-->
       </h1>
       <img src= "./Backgrounds/backg.jpg">  
     </div>
   </head>
   <body>
-      <div>
-        <button class="buttons" id="downbtn" onclick="PyDownloader()">DOWNLOAD</button>
-      </div>
-    </div>
-    <div class="form"></div>
+    <button class="Download_button" id="downbtn" onclick="PyDownloader()">DOWNLOAD</button>
     <input type="text" id="Downlink" class="form_inp" autocomplete="off">
     <label for="Downlink" class="for_label" id="Link">LINK</label>
     <script src="./renderer.js"></script>

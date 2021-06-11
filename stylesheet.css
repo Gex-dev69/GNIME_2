@@ -13,7 +13,10 @@
   font-family: myboi;
   src: url(./fonts/grunge.ttf);
 }
-
+@font-face {
+  font-family: Aged;
+  src: url('./fonts/Brotherland-Aged.otf');
+}
 body {
   font-family: "Convergence", sans-serif;
   height: 100vh;
@@ -22,6 +25,8 @@ body {
   align-items: center;
   font-size: 1.2rem;
   background-color: #060b23;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .form {
   position: relative;
@@ -31,9 +36,9 @@ body {
 .form_inp{
   position: absolute;
   top: 350px;
-  left: 0;
+  left: 81px;
   width: 500px;
-  height: 50px;
+  height: 40px;
   border: 2px solid #e1e5ee;
   border-radius: 0.5rem;
   font-family: inherit;
@@ -51,8 +56,8 @@ body {
 }
 .for_label {
   position: absolute;
-  left: 1rem;
-  top: 358px;
+  left: 5rem;
+  top: 360px;
   padding: 0 0.5rem;
   color: white;
   cursor: text;
@@ -82,27 +87,27 @@ img {
 	transform: translate(-50%,-50%);
   font-family: myboi;
 }
-.buttons{
+.Download_button{
   background: transparent;
   position: relative;
-  color: #cf11c6;
-  top: -13.8cm;
-  left: 14cm;
-  width: 230px;
-  height: 50px;
-  font-family: myboi;
+  color: white;
+  top: -9.9cm;
+  font-family: aged;
+  left: 16cm;
+  width: 114px;
+  height: 40px;
+  text-align: left;
   font-size: 18px;
   border-color: aqua;
   font-weight: 400;
-  border-radius: 22px;
+  border-radius: 0px;
   letter-spacing: 0px;
   transition: 2s;
   transition: color 0.5s;
-
 }
-.buttons:hover{
+.Download_button:hover{
   cursor: pointer;
-  box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
+  box-shadow: 0 2px 50px 0  aqua, 0 20px 100px 0 aqua;
   transition: 1s;
   background-color: #cf11c6;
   color: aqua;
@@ -115,7 +120,7 @@ img {
 	transition: 0.5s;
   padding-left: 10px;
   padding-right: 10px;
-  left: 32cm;
+  left: 26cm;
   padding-bottom: 0px;
   position: relative;
   text-align: center;
@@ -126,7 +131,6 @@ img {
   cursor: pointer;
 	box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
 	transition: 0.5s;
-  background-color: rgb(133, 35, 133);
 }
 .minimize_button{
   background: transparent;
@@ -136,7 +140,7 @@ img {
 	transition: 0.5s;
   padding-left: 10px;
   padding-right: 10px;
-  left: 29.8cm;
+  left: 20.7cm;
   padding-bottom: 0px;
   position: relative;
   text-align: center;
@@ -157,7 +161,7 @@ img {
 	transition: 0.5s;
   padding-left: 10px;
   padding-right: 10px;
-  left: 27.4cm;
+  left: 23.5cm;
   padding-bottom: 0px;
   position: relative;
   text-align: center;
@@ -171,3 +175,105 @@ img {
 	transition: 0.5s;
   background-color: rgb(133, 35, 133);
 }
+
+.navbar {
+  position: fixed;
+  background-color:rgb(30, 16, 78);
+  transition: width 600ms ease;
+  overflow: hidden;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: green;
+  color: #ececec;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+
+
+
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 4rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 10rem;
+  }
+  .navbar:hover ~ .form_inp{
+    left: 4.2cm;
+    transition: 600ms;
+  }
+  .navbar:hover ~ .for_label{
+    left: 4.5cm;
+    transition: 600ms;
+  }
+  .navbar:not(:hover) ~ .form_inp{
+    left: 81px;
+    transition: 600ms;
+  }
+  .navbar:not(:hover) ~ .for_label{
+    left: 5rem;
+    transition: 600ms;
+  }
+  .navbar:hover ~ .Download_button{
+    left: 18cm;
+    transition: 600ms;
+  }
+  .navbar:not(:hover) ~ .Download_button{
+    left: 16cm;
+    transition: 600ms;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
