@@ -1,0 +1,17 @@
+@font-face{
+    font-family: defont;
+    src: url(./fonts/REP2.TTF);
+}
+  @font-face {
+    font-family: Neutrons;
+    src: url("./fonts/Longhaul.ttf");
+}
+  @font-face{
+    font-family: myboi;
+    src: url(./fonts/grunge.ttf);
+}
+  @font-face {
+    font-family: Aged;
+    src: url('./fonts/Brotherland-Aged.otf');
+}
+  

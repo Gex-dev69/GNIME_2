@@ -1,0 +1,69 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Convergence", sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #060b23;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+.form_inp{
+  position: absolute;
+  top: 350px;
+  left: 81px;
+  width: 500px;
+  height: 40px;
+  border: 2px solid #e1e5ee;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+.form_inp:hover{
+  border-color: #adffff;
+}
+.form_inp:focus{
+  border-color: #adffff;
+}
+.for_label {
+  position: absolute;
+  left: 5rem;
+  top: 360px;
+  padding: 0 0.5rem;
+  color: white;
+  cursor: text;
+  font-family: defont;
+  font-size: 20px;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+  -webkit-user-select: none;
+}
+.form_inp:focus ~ .for_label,
+.for_inp:not(:placeholder-shown).for_inp:not(:focus) ~ .for_label {
+  opacity: 0;
+}
+img { 
+  top: 1000px;
+  max-width: 100%;
+  height: auto;
+}  
