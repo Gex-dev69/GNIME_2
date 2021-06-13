@@ -16,7 +16,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     frame: false,
     width: 1024,
-    height: 800,
+    height: 700,
     titleBarStyle: "hidden",
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -27,7 +27,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('main.html')
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
   ipc.on("close",()=>{
