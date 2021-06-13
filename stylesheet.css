@@ -9,6 +9,10 @@
   font-family: defont;
   src: url(./fonts/REP2.TTF);
 }
+@font-face {
+  font-family: Neutrons;
+  src: url("./fonts/Longhaul.ttf");
+}
 @font-face{
   font-family: myboi;
   src: url(./fonts/grunge.ttf);
@@ -85,19 +89,19 @@ img {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-  font-family: myboi;
+  font-family: Neutrons;
 }
 .Download_button{
   background: transparent;
+  font-family: Neutrons;
   position: relative;
   color: white;
   top: -9.9cm;
-  font-family: aged;
   left: 16cm;
   width: 114px;
   height: 40px;
   text-align: left;
-  font-size: 18px;
+  font-size: 21px;
   border-color: aqua;
   font-weight: 400;
   border-radius: 0px;
@@ -204,6 +208,7 @@ img {
 .nav-link {
   display: flex;
   align-items: center;
+  font-family: Neutrons;
   height: 5rem;
   color: #b6b6b6;
   text-decoration: none;
@@ -213,12 +218,17 @@ img {
 
 .nav-link:hover {
   filter: grayscale(0%) opacity(1);
-  background: green;
+  background-image: url("./images/bocku_no.png");
+  background-position: right;
+  background-color: #311330;
+  background-size: 50px;
+  background-repeat: no-repeat;
   color: #ececec;
 }
 
 .link-text {
   display: none;
+  margin-left: 1rem
 }
 
 

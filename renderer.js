@@ -19,7 +19,7 @@ function maxied(){
 }
 function test(){
     ipcRenderer.send("state");
-    document.getElementById("ima").src="./Backgrounds/backg2.gif";
+    document.getElementById("ima").src="./Backgrounds/Henta_Back.gif";
 }
 function PyDownloader(){
   var link = document.getElementById('Downlink').value
