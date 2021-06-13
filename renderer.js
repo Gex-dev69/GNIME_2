@@ -17,8 +17,9 @@ function minked(){
 function maxied(){
     ipcRenderer.send("maxi")
 }
-function starte(){
-    document.getElementById("downbtn").innerHTML=('changed');
+function test(){
+    ipcRenderer.send("state");
+    document.getElementById("ima").src="./Backgrounds/backg2.gif";
 }
 function PyDownloader(){
   var link = document.getElementById('Downlink').value

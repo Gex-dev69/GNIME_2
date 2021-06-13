@@ -39,6 +39,9 @@ function createWindow () {
   ipc.on("maxi",()=>{
     mainWindow.maximize();
   })
+  ipc.on("state",()=>{
+    console.log("clicked");
+  })
 }
 
 
