@@ -27,7 +27,7 @@ function PyDownloader(){
   let options={
     args: [link]
   }
-  PythonShell.run('./Engine/Downloader.py',options,function(err, results){
+  PythonShell.run('./Engine/Anime_downloader.py',options,function(err, results){
     if (err) throw err;
     console.log(results);
   })
