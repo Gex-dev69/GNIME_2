@@ -23,7 +23,19 @@
   margin-top: auto;
 }
 
-.nav-link {
+.nav-GNIME {
+  display: flex;
+  align-items: left;
+  text-align: left;
+  font-family: myboi;
+  height: 5rem;
+  font-size: 30px;
+  color: aqua;
+  text-decoration: none;
+  transition: 600ms;
+}
+
+.nav-second-feature {
   display: flex;
   align-items: center;
   font-family: Neutrons;
@@ -34,7 +46,48 @@
   transition: 600ms;
 }
 
-.nav-link:hover {
+.nav-second-feature:hover {
+  filter: grayscale(0%) opacity(1);
+  background-position: right;
+  background-color: #311330;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  color: #ececec;
+}
+
+.nav-third-feature {
+  display: flex;
+  align-items: center;
+  font-family: Neutrons;
+  height: 5rem;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.nav-third-feature:hover {
+  filter: grayscale(0%) opacity(1);
+  background-position: right;
+  background-image: url("../images/onepiece.png");
+  background-color: #311330;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  color: #ececec;
+}
+
+.nav-fourth-feature {
+  display: flex;
+  align-items: center;
+  font-family: Neutrons;
+  height: 5rem;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.nav-fourth-feature:hover {
   filter: grayscale(0%) opacity(1);
   background-image: url("../images/bocku_no.png");
   background-position: right;
@@ -44,6 +97,25 @@
   color: #ececec;
 }
 
+.nav-credit {
+  display: flex;
+  align-items: center;
+  font-family: Neutrons;
+  height: 5rem;
+  color: #b6b6b6;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: 600ms;
+}
+
+.nav-credit:hover {
+  filter: grayscale(0%) opacity(1);
+  background-position: right;
+  background-color: #311330;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  color: #ececec;
+}
 .link-text {
   display: none;
   margin-left: 1rem;

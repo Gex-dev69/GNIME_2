@@ -3,7 +3,7 @@
   font-family: Neutrons;
   position: relative;
   color: white;
-  top: -9.9cm;
+  top: -9.3cm;
   left: 16cm;
   width: 114px;
   height: 40px;
@@ -26,7 +26,6 @@
 .close_button {
   background: transparent;
   color: aquamarine;
-  font-family: myboi;
   border-color: aqua;
   transition: 0.5s;
   padding-left: 10px;
@@ -47,7 +46,6 @@
 .minimize_button {
   background: transparent;
   color: aquamarine;
-  font-family: myboi;
   border-color: aqua;
   transition: 0.5s;
   padding-left: 10px;
@@ -68,7 +66,6 @@
 .max_button {
   background: transparent;
   color: aquamarine;
-  font-family: myboi;
   border-color: aqua;
   transition: 0.5s;
   padding-left: 10px;
