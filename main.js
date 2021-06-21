@@ -1,10 +1,13 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, Menu,ipcMain } = require('electron')
+const {app, BrowserWindow, Menu,ipcMain, ipcRenderer } = require('electron')
 const {PythonShell} = require('python-shell')
 const { get } = require('http')
 const path = require('path')
 const { contextIsolated } = require('process')
 const ipc = ipcMain
+const LocalStorage = require('node-localstorage').LocalStorage;
+localStorage = new LocalStorage('./tmp');
+
 
 
 
@@ -42,7 +45,20 @@ function createWindow () {
   ipc.on("state",()=>{
     console.log("clicked");
   })
+  ipc.on('PyDown',(event,arg)=>{
+    console.log(arg)
+    let options={
+      mode: "text",
+      args: [arg],
+    }
+    PythonShell.run('./Engine/search_engine.py',options,function(err, Ani_link){
+      if (err) throw err;
+      console.log(Ani_link);
+      mainWindow.webContents.send("Anime_images",Ani_link);
+    })
+  })
 }
+
 
 
 // This method will be called when Electron has finished

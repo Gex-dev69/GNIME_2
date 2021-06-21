@@ -7,10 +7,8 @@ import re
 from pySmartDL import *
 from tkinter import filedialog
 import os
-from PySide2 import QtPrintSupport
 import tkinter
-from PySide2 import *
-### THis shit better work
+## THis shit better work
 
 java_link = sys.argv[1]
 
@@ -44,7 +42,7 @@ def start(url):
 
         ## This shit took me hourssssssss ffs
     for episode in Filter(links):
-            # Download sep with specfic character Filter
+            # Download eps with specfic character Filter
         episodes = (f"https://animekisa.tv/{episode}")
         req2 = Request(episodes, headers={'User-Agent': 'Mozilla/5.0'})
         webpage2 = urlopen(req2).read()

@@ -27,6 +27,7 @@
   background: transparent;
   color: aquamarine;
   border-color: aqua;
+  position: inherit;
   transition: 0.5s;
   padding-left: 10px;
   padding-right: 10px;

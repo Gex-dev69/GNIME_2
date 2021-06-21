@@ -131,6 +131,8 @@
 
   .navbar:hover {
     width: 10rem;
+    overflow-y: visible;
+    overflow-x: hidden;
   }
   .navbar:hover ~ .form_inp {
     left: 4.2cm;
@@ -139,6 +141,9 @@
   .navbar:hover ~ .for_label {
     left: 4.5cm;
     transition: 600ms;
+  }
+  .navbar:hover ~ .sol {
+    left: 4.5cm;
   }
   .navbar:not(:hover) ~ .form_inp {
     left: 81px;
