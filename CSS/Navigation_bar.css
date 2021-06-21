@@ -143,7 +143,8 @@
     transition: 600ms;
   }
   .navbar:hover ~ .sol {
-    left: 4.5cm;
+    left: 10cm;
+    transition: 600ms;
   }
   .navbar:not(:hover) ~ .form_inp {
     left: 81px;

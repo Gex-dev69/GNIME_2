@@ -6,6 +6,7 @@ const path = require('path')
 const { contextIsolated } = require('process')
 const ipc = ipcMain
 const LocalStorage = require('node-localstorage').LocalStorage;
+const { event } = require('jquery')
 localStorage = new LocalStorage('./tmp');
 
 
@@ -45,16 +46,26 @@ function createWindow () {
   ipc.on("state",()=>{
     console.log("clicked");
   })
-  ipc.on('PyDown',(event,arg)=>{
+  ipc.on('Get_images',(event,arg)=>{
+    let options={
+      mode: "text",
+      args: [arg],
+    }
+    PythonShell.run('./Engine/search_engine/Images.py',options,function(err, Ani_link){
+      if (err) throw err;
+      mainWindow.webContents.send("Anime_images",Ani_link);
+    })
+  })
+  ipc.on("Get_Names",(event,arg)=>{
+    console.log("Get Name: invoked")
     console.log(arg)
     let options={
       mode: "text",
       args: [arg],
     }
-    PythonShell.run('./Engine/search_engine.py',options,function(err, Ani_link){
+    PythonShell.run('./Engine/search_engine/Names.py',options,function(err, Ani_link){
       if (err) throw err;
-      console.log(Ani_link);
-      mainWindow.webContents.send("Anime_images",Ani_link);
+      mainWindow.webContents.send("Anime_Names",Ani_link);
     })
   })
 }

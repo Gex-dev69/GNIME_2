@@ -1,0 +1,25 @@
+.sol{
+    width: 5cm;
+    height: 5cm;
+    bottom: 8cm;
+    left: 2cm;
+    float: left;
+    clear: left;
+}
+.Ani_names{
+    display: flex;
+    float: right;
+    clear: right;
+    color: white;
+    padding-bottom: 3cm;
+    padding-top: 1cm;
+    cursor: text;
+    font-family: Aged;
+    font-size: 10px;
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    line-height: 70px;
+    height: 70px;
+}

@@ -80,11 +80,7 @@ body::-webkit-scrollbar-thumb {
   min-height: 500px;
   transition: 600ms;
 }  
-.sol{
-  position: relative;
-  width: 5cm;
-  height: 5cm;
-  bottom: 8cm;
-  left: 2cm;
-}
 
+h1{
+  position: fixed;
+}

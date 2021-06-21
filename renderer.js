@@ -6,6 +6,7 @@
 const {ipcRenderer, ipcMain} = require('electron')
 var path = require('path');
 const { event } = require('jquery');
+const { link } = require('fs');
 
 function clicked(){
     ipcRenderer.send("close");
@@ -19,9 +20,17 @@ function maxied(){
 function test(){
     ipcRenderer.send("state");
 }
-function PyDownloader(){
+function search_engine(){
   var Ani_name = document.getElementById("searlink").value;
-  ipcRenderer.send("PyDown", Ani_name);
+  ipcRenderer.send("Get_images", Ani_name);
+  ipcRenderer.send("Get_Names",Ani_name);
+}
+function download_btns(Link){
+    var links = link
+    '<input type="button" onClick="gotoNode(\'' + result.name + '\')" />'
+    // Get array number with this && with array number get name
+    // add link address on the name
+    // pass variable to the downloader
 }
 ipcRenderer.on("Anime_images",(event,arg)=>{
     var yo = arg;
@@ -38,6 +47,17 @@ ipcRenderer.on("Anime_images",(event,arg)=>{
       bob.appendChild(img);
     }
 })
-
+ipcRenderer.on("Anime_Names",(event,arg)=>{
+    var yo = arg;
+    var discard = yo.length;
+    var bob = document.getElementById('bob');
+    for (i = 0; discard > i; i++)
+    {
+      var label = document.createElement("label");
+      label.innerHTML = yo[i];
+      label.className="Ani_names"
+      bob.appendChild(label);
+    }
+})
 
 
