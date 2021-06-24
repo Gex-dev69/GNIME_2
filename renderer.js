@@ -49,11 +49,11 @@ ipcRenderer.on("Anime_images",(event,arg)=>{
 })
 ipcRenderer.on("Anime_Names",(event,arg)=>{
     var yo = arg;
-    var discard = yo.length;
+    var discard = yo.length - 2;
     var bob = document.getElementById('bob');
     for (i = 0; discard > i; i++)
     {
-      var label = document.createElement("label");
+      var label = document.createElement("p");
       label.innerHTML = yo[i];
       label.className="Ani_names"
       bob.appendChild(label);

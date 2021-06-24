@@ -26,6 +26,7 @@
 .nav-GNIME {
   display: flex;
   align-items: left;
+  padding-top: 0.5cm;
   text-align: left;
   font-family: myboi;
   height: 5rem;
