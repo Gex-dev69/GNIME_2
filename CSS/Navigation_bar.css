@@ -50,7 +50,8 @@
 .nav-second-feature:hover {
   filter: grayscale(0%) opacity(1);
   background-position: right;
-  background-color: #311330;
+  background-color: #1ab4ad;
+  background-image: url("../images/girl.png");
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
@@ -71,7 +72,7 @@
   filter: grayscale(0%) opacity(1);
   background-position: right;
   background-image: url("../images/onepiece.png");
-  background-color: #311330;
+  background-color: #1ab4ad;
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
@@ -92,7 +93,7 @@
   filter: grayscale(0%) opacity(1);
   background-image: url("../images/bocku_no.png");
   background-position: right;
-  background-color: #311330;
+  background-color: #1ab4ad;
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
