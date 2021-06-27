@@ -156,11 +156,11 @@
     left: 5rem;
     transition: 600ms;
   }
-  .navbar:hover ~ .Download_button {
+  .navbar:hover ~ .search_button {
     left: 18cm;
     transition: 600ms;
   }
-  .navbar:not(:hover) ~ .Download_button {
+  .navbar:not(:hover) ~ .search_button {
     left: 16cm;
     transition: 600ms;
   }

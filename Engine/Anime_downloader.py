@@ -1,6 +1,7 @@
 
 from sys import argv, stdout
 import sys
+from typing import final
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 import re
@@ -8,6 +9,7 @@ from pySmartDL import *
 from tkinter import filedialog
 import os
 import tkinter
+import re
 ## THis shit better work
 
 java_link = sys.argv[1]
@@ -81,6 +83,12 @@ def start(url):
                 obj.start()
         except ValueError:
             pass
-start(url=java_link)        
+
+
+real_link =re.sub("[' ']","-",java_link)
+
+final_link = f"https://animekisa.tv/{real_link}"
+
+start(url=final_link)        
 sys.stdout.flush()
 

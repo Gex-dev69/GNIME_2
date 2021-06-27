@@ -25,25 +25,18 @@ function search_engine(){
   ipcRenderer.send("Get_images", Ani_name);
   ipcRenderer.send("Get_Names",Ani_name);
 }
-function download_btns(Link){
-    var links = link
-    '<input type="button" onClick="gotoNode(\'' + result.name + '\')" />'
-    // Get array number with this && with array number get name
-    // add link address on the name
-    // pass variable to the downloader
-}
 ipcRenderer.on("Anime_images",(event,arg)=>{
     var yo = arg;
     var discard = yo.length - 2;
     var bob = document.getElementById('bob');
-    document.querySelectorAll('.sol').forEach(function(a){
+    document.querySelectorAll('.Ani_images').forEach(function(a){
         a.remove()
     })
     for (i = 0; discard > i; i++)
     {
       var img = document.createElement("img");
       img.src = yo[i];
-      img.className="sol"
+      img.className="Ani_images"
       bob.appendChild(img);
     }
 })
@@ -51,13 +44,22 @@ ipcRenderer.on("Anime_Names",(event,arg)=>{
     var yo = arg;
     var discard = yo.length - 2;
     var bob = document.getElementById('bob');
+    document.querySelectorAll('.Ani_names').forEach(function(a){
+        a.remove()
+    })
+  
     for (i = 0; discard > i; i++)
     {
-      var label = document.createElement("p");
-      label.innerHTML = yo[i];
-      label.className="Ani_names"
-      bob.appendChild(label);
+    var label = document.createElement("p");
+    label.innerHTML = yo[i];
+    label.onclick = function() {start_download(this.innerHTML)};
+    label.className="Ani_names"
+    bob.appendChild(label);
     }
 })
+
+function start_download(ani){
+   ipcRenderer.send("start_download",ani)
+}
 
 

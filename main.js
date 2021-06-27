@@ -68,7 +68,22 @@ function createWindow () {
       mainWindow.webContents.send("Anime_Names",Ani_link);
     })
   })
-}
+  ipc.on("start_download",(event,arg)=>{
+    let options={
+      mode: "text",
+      args: [arg],
+    }
+    console.log(arg)
+    PythonShell.run('./Engine/Anime_downloader.py',options,function(err, Ani_link){
+      if (err) throw err;
+    })
+  })
+  ipc.on("test",(event,arg)=>{
+    console.log(arg)
+  })}
+  
+
+
 
 
 

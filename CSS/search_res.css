@@ -1,14 +1,14 @@
-.sol{
+.Ani_images{
     width: 5cm;
     height: 5cm;
     bottom: 8cm;
     left: 10cm;
     float: left;
-    clear: left;
+    clear: both;
 }
 .Ani_names{
     color: white;
-    font-size: 20px;
-    float: right;
-    clear: both;
+    font-size: 25px;
+    left: 20cm;
+    padding-top: 4.1cm;
 }

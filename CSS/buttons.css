@@ -1,11 +1,11 @@
-.Download_button {
+.search_button{
   background: transparent;
   font-family: Neutrons;
   position: relative;
-  color: white;
+  color: rgb(54, 132, 168);
   top: -8.9cm;
   left: 16cm;
-  width: 114px;
+  width: 100px;
   height: 40px;
   text-align: left;
   font-size: 21px;
@@ -16,7 +16,7 @@
   transition: 2s;
   transition: color 0.5s;
 }
-.Download_button:hover {
+.search_button:hover {
   cursor: pointer;
   box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
   transition: 1s;

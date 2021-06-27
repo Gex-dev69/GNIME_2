@@ -1,4 +1,3 @@
-from os import readlink
 from sys import argv, stdout
 import sys
 from urllib import request
@@ -9,8 +8,6 @@ import re
 
 
 
-java_link = sys.argv[1]
-real_link = re.sub("[' ']","-",java_link)
 
 def search(Ani):
     Search = (f"https://animekisa.tv/search?q={Ani}")
@@ -38,6 +35,5 @@ def search(Ani):
   
         
 
-
-search(Ani=real_link)
+search(Ani="naruto")
 sys.stdout.flush()
