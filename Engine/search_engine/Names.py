@@ -10,7 +10,7 @@ import re
 
 
 java_link = sys.argv[1]
-real_link = re.sub("[' ']","-",java_link)
+real_link = re.sub("[' ']","+",java_link)
 
 def search(Ani):
     Search = (f"https://animekisa.tv/search?q={Ani}")

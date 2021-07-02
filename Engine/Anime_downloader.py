@@ -12,11 +12,12 @@ import tkinter
 import re
 ## THis shit better work
 
-java_link = sys.argv[1]
+
 
 def start(url):
     #### Scrapper phase 1
-    req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+    link = f"https://animekisa.tv/{url}"
+    req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
     webpage = urlopen(req).read()
 
     soup = BeautifulSoup(webpage, "lxml")
@@ -84,11 +85,11 @@ def start(url):
         except ValueError:
             pass
 
+java_link = sys.argv[1]
 
-real_link =re.sub("[' ']","-",java_link)
+subbed_link =re.sub("[' ']","-",java_link)
 
-final_link = f"https://animekisa.tv/{real_link}"
-
-start(url=final_link)        
+start(url=subbed_link)
+       
 sys.stdout.flush()
 
