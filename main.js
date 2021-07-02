@@ -80,6 +80,7 @@ function createWindow () {
   })
   ipc.on("test",(event,arg)=>{
     console.log(arg)
+    console.log("branch test")
   })}
   
 
