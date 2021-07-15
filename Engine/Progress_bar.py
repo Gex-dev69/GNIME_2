@@ -3,7 +3,7 @@ from pySmartDL.utils import progress_bar
 import time
 import os
 
-url = "https://fvs.io/redirector?token=ZE5pYXRrdHBqUVJzNUF2RkRPclVtSjJ2TXEzVE92VytuQlNVZ0dWZ1dNK3lyTm1obzdDY3RFZDBzZjFtL1BhY3RoQVVWYzB1RUp1cWZjUStRc0d6ZUVrUldhM09QcnE5dnFOM2dYTEJQd2JXVVpqNkJMVldkbWZPMlBpcUV3V1VvQVIzZmNvNHJHMis0Sld6U2hqZ0xFSFp4STBsdXVJT25RPT06OXhHQ09KNi81Q0dRUTBHLzYwZTVPZz09"
+url = "https://stackoverflow.com/questions/50789873/electron-javascript-detect-when-window-is-un-maximized"
 
 dest = r'C:\Users\dgexi\OneDrive\Documents\Adobe'
 
@@ -20,7 +20,6 @@ while not obj.isFinished():
     print("Status: %s" % obj.get_status())
     print("\n"*2+"="*50+"\n"*2)
     time.sleep(0.2)
-    
 
 if obj.isSuccessful():
     print("downloaded file to '%s'" % obj.get_dest())

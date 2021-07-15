@@ -8,6 +8,8 @@ const ipc = ipcMain
 const LocalStorage = require('node-localstorage').LocalStorage;
 const { event } = require('jquery')
 localStorage = new LocalStorage('./tmp');
+var Twidth = 1024;
+var Theight = 650;
 
 
 
@@ -19,8 +21,8 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     frame: false,
-    width: 1024,
-    height: 700,
+    width: Twidth,
+    height: Theight,
     titleBarStyle: "hidden",
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -40,47 +42,27 @@ function createWindow () {
   ipc.on("minimize",()=>{
     mainWindow.minimize();
   })
-  ipc.on("maxi",()=>{
-    mainWindow.maximize();
-  })
-  ipc.on("state",()=>{
-    console.log("clicked");
-  })
-  ipc.on('Get_images',(event,arg)=>{
+
+  ipc.on('download',(event,arg)=>{
     let options={
       mode: "text",
       args: [arg],
     }
-    PythonShell.run('./Engine/search_engine/Images.py',options,function(err, Ani_link){
-      if (err) throw err;
-      mainWindow.webContents.send("Anime_images",Ani_link);
-    })
-  })
-  ipc.on("Get_Names",(event,arg)=>{
-    console.log("Get Name: invoked")
-    console.log(arg)
-    let options={
-      mode: "text",
-      args: [arg],
-    }
-    PythonShell.run('./Engine/search_engine/Names.py',options,function(err, Ani_link){
-      if (err) throw err;
-      mainWindow.webContents.send("Anime_Names",Ani_link);
-    })
-  })
-  ipc.on("start_download",(event,arg)=>{
-    let options={
-      mode: "text",
-      args: [arg],
-    }
-    console.log(arg)
     PythonShell.run('./Engine/Anime_downloader.py',options,function(err, Ani_link){
       if (err) throw err;
     })
   })
+  ipc.on('sauce_download',(event,arg)=>{
+    let options={
+      mode: "text",
+      args: [arg],
+    }
+    PythonShell.run('./Engine/Doujin_downloder.py',options,function(err, sauce){
+      if (err) throw err;
+    })
+  })
   ipc.on("test",(event,arg)=>{
-    console.log(arg)
-    console.log("branch test")
+    console.log("clicked")
   })}
   
 

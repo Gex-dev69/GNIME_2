@@ -9,18 +9,18 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-second-feature">
-            <span class="link-text">Doujin</span>
+          <a href="#" class="nav-second-feature" onclick="Anime()">
+            <span class="link-text">Anime</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" onclick="Manga()">
           <a href="#" class="nav-third-feature">
             <span class="link-text">Manga</span>
           </a>
         </li>
-        <li class="nav-item" onclick='test()'>
-          <a href="#" class="nav-fourth-feature">
-            <span class="link-text" id="Hena">Hentai</span>
+        <li class="nav-item">
+          <a href="#" class="nav-fourth-feature" onclick="Doujin()">
+            <span class="link-text" id="Hena">Doujin</span>
           </a>
         </li>
         <svg
@@ -52,24 +52,22 @@
             </a>
           </li>
     </nav>
+    <h1 id="lol" style="font-size: 5px; background-color: var(--alternative); height: 0.5cm; width: 30cm; -webkit-app-region: drag;">
+      <button id="clss" class="close_button" onclick="clicked()">X</button>
+      <button class="minimize_button" onclick="minked()">-</button>
+    </h1>
   <link rel="stylesheet" href="./CSS/Main.css">
   <link rel="stylesheet" href="./CSS/fonts.css"> 
   <link rel="stylesheet" href="./CSS/buttons.css">
   <link rel="stylesheet" href="./CSS/Navigation_bar.css">
   <link rel="stylesheet" href="./CSS/search_res.css">
+  <link rel="stylesheet" href="./CSS/header.css">
     <meta charset="UTF-8">
-    <div>  
-      <h1 id="lol" style="font-size: 5px; background-color: rgb(30, 16, 78); height: 0.5cm; width: 30cm;">
-        <button class="close_button" onclick="clicked()">X</button>
-        <button class="max_button" onclick="maxied()">Y</button>
-        <button class="minimize_button" onclick="minked()">Z</button>
-      </h1>
-      <img id="ima" src="./Backgrounds/Gmain_Back.jpg" class="backg">
-    </div>
+    <img id="ima" src="./Backgrounds/Gmain_Back.jpg" class="backg">
   </head>
-  <body>
-    <button class="search_button" id="downbtn" onclick="search_engine()">Search</button>
-    <input type="text" id="searlink" class="form_inp">
+  <body style="-webkit-app-region: no-drag;">
+    <button class="download_button" id="downbtn" onclick="download_engine()">Download</button>
+    <input type="text" id="searlink" class="form_inp" placeholder="Link..." >
     <div id="bob">
     </div>
     <script src="./renderer.js"></script>

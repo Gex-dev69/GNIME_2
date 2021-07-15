@@ -1,14 +1,28 @@
+
 import os
-from hentai.hentai import Format,Hentai
+import sys
+import tkinter
+from tkinter import filedialog
 
+from hentai.hentai import Format, Hentai
 
+#java_sauce = sys.argv[1]
 
 def doujin(sauce):
     douji = Hentai(sauce)
-    print(douji.title(Format.Pretty))
-    print(douji.artist)
-    print(douji.upload_date)
-    print(douji.image_urls)
-    douji.download(dest=r"C:\Users\dgexi\OneDrive\Documents\Adobe\New folder",progressbar=True)
+    top = tkinter.Tk()
+    currdir = os.getcwd()
+    top.withdraw()
+    downdir = filedialog.askdirectory(parent=top, initialdir=currdir, title='Choose Download location Bitch')
+    douji.download(dest=downdir,folder=douji.title(Format.Pretty),progressbar=True)
+
+    
+
+  
+
+
+
 
 doujin(177013)
+
+sys.stdout.flush()

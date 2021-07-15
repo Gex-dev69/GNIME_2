@@ -1,8 +1,7 @@
 .navbar {
   position: fixed;
-  background-color: rgb(30, 16, 78);
+  background-color: var(--alternative);
   transition: width 600ms ease;
-  overflow: hidden;
 }
 
 .navbar-nav {
@@ -31,9 +30,14 @@
   font-family: myboi;
   height: 5rem;
   font-size: 25px;
-  color: aqua;
+  color: var(--secondary);
   text-decoration: none;
   transition: 600ms;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-second-feature {
@@ -41,20 +45,30 @@
   align-items: center;
   font-family: Neutrons;
   height: 5rem;
-  color: #b6b6b6;
+  color: var(--text_color);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: 600ms;
+  -webkit-transition:color 1000ms ease;
+  -moz-transition:color 1000ms ease;
+  -o-transition:color 1000ms ease;
+  transition:color 1000ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-second-feature:hover {
   filter: grayscale(0%) opacity(1);
   background-position: right;
-  background-color: #1ab4ad;
+  background-color: var(--light_aqua);
   background-image: url("../images/girl.png");
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-third-feature {
@@ -62,20 +76,30 @@
   align-items: center;
   font-family: Neutrons;
   height: 5rem;
-  color: #b6b6b6;
+  color: var(--text_color);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: 600ms;
+  -webkit-transition:color 1000ms ease;
+  -moz-transition:color 1000ms ease;
+  -o-transition:color 1000ms ease;
+  transition:color 1000ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-third-feature:hover {
   filter: grayscale(0%) opacity(1);
   background-position: right;
   background-image: url("../images/onepiece.png");
-  background-color: #1ab4ad;
+  background-color: var(--light_aqua);
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
+  -webkit-transition:color 1000ms ease;
+  -moz-transition:color 1000ms ease;
+  -o-transition:color 1000ms ease;
+  transition:color 1000ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-fourth-feature {
@@ -83,20 +107,30 @@
   align-items: center;
   font-family: Neutrons;
   height: 5rem;
-  color: #b6b6b6;
+  color: var(--text_color);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: 600ms;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-fourth-feature:hover {
   filter: grayscale(0%) opacity(1);
   background-image: url("../images/bocku_no.png");
   background-position: right;
-  background-color: #1ab4ad;
+  background-color: var(--light_aqua);
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-credit {
@@ -104,10 +138,15 @@
   align-items: center;
   font-family: Neutrons;
   height: 5rem;
-  color: #b6b6b6;
+  color: var(--text_color);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: 600ms;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 
 .nav-credit:hover {
@@ -117,13 +156,18 @@
   background-size: 50px;
   background-repeat: no-repeat;
   color: #ececec;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
 }
 .link-text {
   display: none;
   margin-left: 1rem;
+  -webkit-app-region: no-drag;
 }
 .fa-primary {
-  color: #7ee5ff;
+  color: var(--light_aqua);
   transition: 600ms;
 }
 
@@ -138,8 +182,6 @@
 
   .navbar:hover {
     width: 10rem;
-    overflow-y: visible;
-    overflow-x: hidden;
   }
   .navbar:hover ~ .form_inp {
     left: 4.2cm;
@@ -161,11 +203,11 @@
     left: 5rem;
     transition: 600ms;
   }
-  .navbar:hover ~ .search_button {
+  .navbar:hover ~ .download_button {
     left: 18cm;
     transition: 600ms;
   }
-  .navbar:not(:hover) ~ .search_button {
+  .navbar:not(:hover) ~ .download_button {
     left: 16cm;
     transition: 600ms;
   }

@@ -12,12 +12,12 @@ import tkinter
 import re
 ## THis shit better work
 
-
+## https://anitop.vercel.app/api/v1/top-anime 
+## use the above link for trending anime display
 
 def start(url):
     #### Scrapper phase 1
-    link = f"https://animekisa.tv/{url}"
-    req = Request(link, headers={'User-Agent': 'Mozilla/5.0'})
+    req = Request(url, headers={'User-Agent': 'Mozilla/5.0'})
     webpage = urlopen(req).read()
 
     soup = BeautifulSoup(webpage, "lxml")
@@ -87,9 +87,8 @@ def start(url):
 
 java_link = sys.argv[1]
 
-subbed_link =re.sub("[' ']","-",java_link)
 
-start(url=subbed_link)
+start(url=java_link)
        
 sys.stdout.flush()
 

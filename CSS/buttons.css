@@ -1,11 +1,12 @@
-.search_button{
+
+.download_button{
   background: transparent;
   font-family: Neutrons;
   position: relative;
   color: rgb(54, 132, 168);
-  top: -8.9cm;
+  top: var(--button_position);
   left: 16cm;
-  width: 100px;
+  width: 108px;
   height: 40px;
   text-align: left;
   font-size: 21px;
@@ -16,17 +17,17 @@
   transition: 2s;
   transition: color 0.5s;
 }
-.search_button:hover {
+.download_button:hover{
   cursor: pointer;
   box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
   transition: 1s;
-  background-color: #cf11c6;
-  color: aqua;
+  background-color: var(--button_hover);
+  color: var(--primary)
 }
 .close_button {
   background: transparent;
-  color: aquamarine;
-  border-color: aqua;
+  color: var(--primary);
+  border-color: var(--secondary);
   position: inherit;
   transition: 0.5s;
   padding-left: 10px;
@@ -37,51 +38,42 @@
   text-align: center;
   font-size: 14px;
   transition: background-color 2s;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 .close_button:hover {
   cursor: pointer;
   box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
   transition: 0.5s;
-  background-color: rgb(133, 35, 133);
+  background-color: var(--button_hover);
 }
 .minimize_button {
   background: transparent;
-  color: aquamarine;
-  border-color: aqua;
+  color: var(--primary);
+  border-color: var(--secondary);
   transition: 0.5s;
   padding-left: 10px;
   padding-right: 10px;
   left: 22.4cm;
   padding-bottom: 0px;
+  opacity: 1;
   position: relative;
   text-align: center;
   font-size: 14px;
   transition: background-color 2s;
+  -webkit-transition:color 600ms ease;
+  -moz-transition:color 600ms ease;
+  -o-transition:color 600ms ease;
+  transition:color 600ms ease;
+  -webkit-app-region: no-drag;
 }
 .minimize_button:hover {
   cursor: pointer;
   box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
   transition: 0.5s;
-  background-color: rgb(133, 35, 133);
-}
-.max_button {
-  background: transparent;
-  color: aquamarine;
-  border-color: aqua;
-  transition: 0.5s;
-  padding-left: 10px;
-  padding-right: 10px;
-  left: 24.3cm;
-  padding-bottom: 0px;
-  position: relative;
-  text-align: center;
-  font-size: 14px;
-  transition: background-color 2s;
+  background-color: var(--button_hover);
 }
 
-.max_button:hover {
-  cursor: pointer;
-  box-shadow: 0 2px 50px 0 aqua, 0 20px 100px 0 aqua;
-  transition: 0.5s;
-  background-color: rgb(133, 35, 133);
-}
