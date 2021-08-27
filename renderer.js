@@ -14,6 +14,9 @@ function clicked(){
 function minked(){
     ipcRenderer.send("minimize")
 }
+ipcRenderer.on("doji_doji", function(evt,message){
+    document.getElementById("Hena").innerHTML=message
+})
 
 function Manga(){
     document.getElementById("ima").src="./Backgrounds/manga.jpg"
@@ -28,6 +31,7 @@ function Manga(){
         r.style.setProperty("--button_hover","rgb(22, 18, 22)");
         r.style.setProperty("--search_bar_postion","350px")
         r.style.setProperty("--search_bar_size","500px")
+        r.style.setProperty("--place_holder_color","black");
         document.getElementById("searlink").placeholder="Link..";
     }   
     Font_changer()
@@ -43,8 +47,9 @@ function Anime(){
         r.style.setProperty("--light_aqua","#1ab4ad");
         r.style.setProperty("--text_color","#b6b6b6");
         r.style.setProperty("--button_hover","rgb(133, 35, 133)");
-        r.style.setProperty("--search_bar_postion","350px")
-        r.style.setProperty("--search_bar_size","500px")
+        r.style.setProperty("--search_bar_postion","350px");
+        r.style.setProperty("--search_bar_size","500px");
+        r.style.setProperty("--place_holder_color","rgb(38, 0, 255)");
         document.getElementById("downbtn").onclick=download_engine;
         document.getElementById("searlink").placeholder="Link..";
     }   
@@ -61,10 +66,30 @@ function Doujin(){
         r.style.setProperty("--light_aqua","#0b1312");
         r.style.setProperty("--text_color","#ff0000");
         r.style.setProperty("--button_hover","rgb(230, 15, 0)");
-        r.style.setProperty("--search_bar_postion","200px")
-        r.style.setProperty("--search_bar_size","180px")
+        r.style.setProperty("--search_bar_postion","1000px")
+        r.style.setProperty("--search_bar_size","220px")
+        r.style.setProperty("--place_holder_color","red");
         document.getElementById("downbtn").onclick=doujin_downloader;
-        document.getElementById("searlink").placeholder="Sauce";
+        document.getElementById("searlink").placeholder="Eg.177013";
+    }   
+    Font_changer()
+}
+function Youtube(){
+    document.getElementById("ima").src="./Backgrounds/Youtube.jpeg"
+    var r = document.querySelector(':root');
+    function Font_changer(){
+        document.getElementById('searlink').value = ''
+        r.style.setProperty('--primary', '#rgb(243, 20, 4)');
+        r.style.setProperty("--secondary","rgb(0, 0, 0)");
+        r.style.setProperty("--alternative","rgb(199, 202, 8)");
+        r.style.setProperty("--light_aqua","#0b1312");
+        r.style.setProperty("--text_color","#ff0000");
+        r.style.setProperty("--button_hover","rgb(230, 15, 0)");
+        r.style.setProperty("--search_bar_postion","350px");
+        r.style.setProperty("--search_bar_size","500px");
+        r.style.setProperty("--place_holder_color","red");
+        document.getElementById("downbtn").onclick=doujin_downloader;
+        document.getElementById("searlink").placeholder="YT_Link";
     }   
     Font_changer()
 }
@@ -75,7 +100,7 @@ function download_engine(){
 function doujin_downloader(){
     var sauce = document.getElementById("searlink").value;
     if (sauce == ""){
-        alert("There is nothing in the Box retard")
+        alert("Empyt box")
     }else{
     ipcRenderer.send("sauce_download", sauce);
     }

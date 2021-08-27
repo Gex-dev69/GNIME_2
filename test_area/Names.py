@@ -1,29 +1,33 @@
-
-import os
-import sys
-import tkinter
-from tkinter import filedialog
-from pySmartDL import SmartDL
-from hentai.hentai import Format, Hentai
-import time
-
-#java_sauce = sys.argv[1]
+import tkinter as tk
+from tkinter import ttk
 
 
-def doujin(sauce):
-    douji = Hentai(sauce)
-    top = tkinter.Tk()
-    currdir = os.getcwd()
-    top.withdraw()
-    downdir = filedialog.askdirectory(
-    parent=top, initialdir=currdir, title='Choose Download location Bitch')
-    for urls in douji.image_urls:
-        links = [urls]
-    obj = SmartDL(links, downdir)
-    #obj.start()
-    print(links)
-        
+class SampleApp(tk.Tk):
 
-doujin(177013)
+    def __init__(self, *args, **kwargs):
+        tk.Tk.__init__(self, *args, **kwargs)
+        self.button = ttk.Button(text="start", command=self.start)
+        self.button.pack()
+        self.progress = ttk.Progressbar(self, orient="horizontal",
+                                        length=200, mode="determinate")
+        self.progress.pack()
 
-sys.stdout.flush()
+        self.bytes = 0
+        self.maxbytes = 0
+
+    def start(self):
+        self.progress["value"] = 0
+        self.maxbytes = 50000
+        self.progress["maximum"] = 50000
+        self.read_bytes()
+
+    def read_bytes(self):
+        '''simulate reading 500 bytes; update progress bar'''
+        self.bytes += 500
+        self.progress["value"] = self.bytes
+        if self.bytes < self.maxbytes:
+            # read more bytes after 100 ms
+            self.after(100, self.read_bytes)
+
+app = SampleApp()
+app.mainloop()

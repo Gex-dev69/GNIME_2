@@ -4,8 +4,7 @@
   font-family: Neutrons;
   position: relative;
   color: rgb(54, 132, 168);
-  top: var(--button_position);
-  left: 16cm;
+  top: var(--button_position_top);
   width: 108px;
   height: 40px;
   text-align: left;
@@ -57,7 +56,7 @@
   transition: 0.5s;
   padding-left: 10px;
   padding-right: 10px;
-  left: 22.4cm;
+  left: 24.4cm;
   padding-bottom: 0px;
   opacity: 1;
   position: relative;

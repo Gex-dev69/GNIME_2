@@ -57,8 +57,10 @@ function createWindow () {
       mode: "text",
       args: [arg],
     }
+    var pyshell = new PythonShell('Doujin_downloader.py',{scriptPath:"./Engine"});
     PythonShell.run('./Engine/Doujin_downloder.py',options,function(err, sauce){
       if (err) throw err;
+      console.log(sauce)
     })
   })
   ipc.on("test",(event,arg)=>{

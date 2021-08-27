@@ -1,6 +1,6 @@
 const { PythonShell } = require("python-shell");
 
-var pyshell = new PythonShell('test.py',{scriptPath:"./yo.py"});
+var pyshell = new PythonShell('yo.py',{scriptPath:"./"});
 
 pyshell.on('message', function (message) {
   // received a message sent from the Python script (a simple "print" statement) 

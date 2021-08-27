@@ -2,8 +2,9 @@ from pySmartDL import *
 from pySmartDL.utils import progress_bar
 import time
 import os
+import sys
 
-url = "https://stackoverflow.com/questions/50789873/electron-javascript-detect-when-window-is-un-maximized"
+url = "https://fvs.io/redirector?token=a1I2V2Z2TWtnOWUrS0xOK0JpK1FxNGo5UStjYlRmTXBFMWR1aXJSbWhHSmFxNGZ4S0ZKVGpWN291YnN4N0lvMkJCZFBHV1ZsakEzak5FSGpjaUVibkhRakxyTit6bERkWjdZcmFtajB2d29IN3JjU2ZYMUI5eGFpU3ZBQnY4eG9xSUMydDVoN2RmcjJvSVhDTG5HNFdrcjNaRmFZWDdROWt2Q0Q6SWF6WmcwbkhvK1BWSElGNnhXMDhHZz09"
 
 dest = r'C:\Users\dgexi\OneDrive\Documents\Adobe'
 
@@ -11,15 +12,10 @@ obj = SmartDL(url, progress_bar=False, dest=dest)
 obj.start(blocking=False)
 
 while not obj.isFinished():
-    print("Speed: %s" % obj.get_speed(human=True))
-    print("Already downloaded: %s" % obj.get_dl_size(human=True))
-    print("Eta: %s" % obj.get_eta(human=True))
     pro = obj.get_progress()*100
     print("Progress: %d%%" % pro)
-    print("Progress bar: %s" % obj.get_progress_bar())
-    print("Status: %s" % obj.get_status())
-    print("\n"*2+"="*50+"\n"*2)
-    time.sleep(0.2)
+    os.system("cls")
+
 
 if obj.isSuccessful():
     print("downloaded file to '%s'" % obj.get_dest())
@@ -28,7 +24,3 @@ if obj.isSuccessful():
     print(" * MD5: %s" % obj.get_data_hash('md5'))
     print(" * SHA1: %s" % obj.get_data_hash('sha1'))
     print(" * SHA256: %s" % obj.get_data_hash('sha256'))
-else:
-    print("There were some errors:")
-    for e in obj.get_errors():
-        print(str(e))
